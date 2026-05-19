@@ -1,0 +1,151 @@
+body{
+margin:0;
+font-family:Arial;
+background:#050510;
+color:white;
+overflow-x:hidden;
+cursor:none;
+}
+
+/* GRID BACKGROUND */
+#bg{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-3;
+background:
+linear-gradient(rgba(0,255,255,0.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,255,255,0.05) 1px,transparent 1px);
+background-size:40px 40px;
+}
+
+/* CURSOR FIX */
+#cursor{
+position:fixed;
+width:14px;
+height:14px;
+border-radius:50%;
+background:cyan;
+box-shadow:0 0 15px cyan,0 0 30px cyan;
+transform:translate(-50%,-50%);
+pointer-events:none;
+z-index:99999;
+mix-blend-mode:difference;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:rgba(0,255,255,0.05);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav a{
+margin:0 8px;
+color:white;
+text-decoration:none;
+}
+
+/* BUTTON CYBER */
+button{
+background:transparent;
+border:1px solid cyan;
+color:cyan;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+button::before{
+content:"";
+position:absolute;
+width:0%;
+height:100%;
+top:0;
+left:0;
+background:cyan;
+opacity:0.2;
+transition:0.3s;
+}
+
+button:hover::before{
+width:100%;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.badges span{
+display:inline-block;
+margin:5px;
+padding:5px 10px;
+background:rgba(0,255,255,0.1);
+border:1px solid rgba(0,255,255,0.2);
+}
+
+/* SECTIONS */
+.section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+}
+
+/* CARDS */
+.card{
+background:rgba(0,255,255,0.05);
+padding:15px;
+border-radius:12px;
+border:1px solid rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.07) rotateX(10deg);
+box-shadow:0 0 25px cyan;
+}
+
+/* MODAL */
+#modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.box{
+background:#0b0b1a;
+padding:20px;
+border-radius:10px;
+width:320px;
+border:1px solid cyan;
+}
+
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}

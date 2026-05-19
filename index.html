@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الموقع الشخصي لNour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="bg"></div>
+<div id="cursor"></div>
+
+<header>
+<div class="logo">nourabdallahVcR7</div>
+
+<nav>
+<a href="#skills">Skills</a>
+<a href="#exp">Experience</a>
+<a href="#tools">Tools</a>
+<a href="#contact">Contact</a>
+
+<button id="langBtn" onclick="toggleLang()">🌐 AR / EN</button>
+</nav>
+</header>
+
+<section class="hero reveal">
+<h1 id="title"></h1>
+<p id="subtitle"></p>
+
+<div class="badges">
+<span>Developer</span>
+<span>Bot Maker</span>
+<span>Designer</span>
+</div>
+
+<p>Discord: moh.8745</p>
+</section>
+
+<section id="skills" class="section reveal">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JS</div>
+<div class="card">Node</div>
+<div class="card">APIs</div>
+<div class="card">Bots</div>
+</div>
+</section>
+
+<section id="exp" class="section reveal">
+<h2>Experience</h2>
+
+<div class="grid">
+<div class="card" onclick="showExp('web')">Web Dev</div>
+<div class="card" onclick="showExp('bot')">Discord Bots</div>
+<div class="card" onclick="showExp('mc')">Minecraft</div>
+<div class="card" onclick="showExp('api')">APIs</div>
+</div>
+</section>
+
+<section id="tools" class="section reveal">
+<h2>Small Caps Tool</h2>
+<input id="text" oninput="smallCaps()" placeholder="type here...">
+<p id="out"></p>
+</section>
+
+<section id="contact" class="section reveal">
+<h2>Contact</h2>
+<p>Discord: moh.8745</p>
+</section>
+
+<div id="modal">
+<div class="box">
+<span onclick="closeModal()">X</span>
+<h2 id="mTitle"></h2>
+<p id="mText"></p>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
